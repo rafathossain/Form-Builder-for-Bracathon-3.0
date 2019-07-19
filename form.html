@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <title>Genarate Form</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/tether.min.css"/>
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="css/form_builder.css"/>
-    </head>
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-light  bg-faded fixed-top">
-                <div class="clearfix">
-                    <div class="container">
-                        <a href="signlog.html"><button style="cursor: pointer;display: none" class="btn btn-info export_html mt-2 pull-right">Export HTML</button></a>
-                        <h3 class="mr-auto">Genarate Form</h3>
-                    </div>
+
+<head>
+    <title>Genarate Form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tether.min.css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/form_builder.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light  bg-faded fixed-top">
+            <div class="clearfix">
+                <div class="container">
+                    <a href="signlog.html"><button style="cursor: pointer;display: none"
+                            class="btn btn-info export_html mt-2 pull-right">Export HTML</button></a>
+                    <h3 class="mr-auto">Genarate Form</h3>
                 </div>
-            </nav>
-            <br/>
-            <div class="clearfix"></div>
-            <div class="form_builder" style="margin-top: 25px">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <nav class="nav-sidebar">
-                            <ul class="nav">
-                                <li class="form_bal_textfield">
-                                    <a href=" ">Text Field <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_textarea">
-                                    <a href=" ">Text Area <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_select">
-                                    <a href=" ">Select <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_radio">
-                                    <a href=" ">Radio Button <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_checkbox">
-                                    <a href=" ">Checkbox <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_email">
-                                    <a href=" ">Email <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_number">
-                                    <a href=" ">Number <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_password">
-                                    <a href=" ">Password <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_date">
-                                    <a href=" ">Date <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                                <li class="form_bal_button">
-                                    <a href=" ">Button <i class="fa fa-plus-circle pull-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-5 bal_builder">
-                        <div class="form_builder_area"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="col-md-12">
-                            <form class="form-horizontal">
-                                <div class="preview"></div>
-                                <div style="display: none" class="form-group plain_html"><textarea rows="50" class="form-control"></textarea></div>
-                            </form>
-                        </div>
+            </div>
+        </nav>
+        <br />
+        <div class="clearfix"></div>
+        <div class="form_builder" style="margin-top: 25px">
+            <div class="row">
+                <div class="col-sm-2">
+                    <nav class="nav-sidebar">
+                        <ul class="nav">
+                            <li class="form_bal_textfield">
+                                <a href="#!" onclick="text_field()">Text Field <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_textarea">
+                                <a href=" ">Text Area <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_select">
+                                <a href=" ">Select <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_radio">
+                                <a href=" ">Radio Button <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_checkbox">
+                                <a href="#!" onclick="checkbox()">Checkbox <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_email">
+                                <a href=" ">Email <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_number">
+                                <a href=" ">Number <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_password">
+                                <a href=" ">Password <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_date">
+                                <a href=" ">Date <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                            <li class="form_bal_button">
+                                <a href=" ">Button <i class="fa fa-plus-circle pull-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-5 bal_builder">
+                    <div class="form_builder_area"><form id="form_builder_area" action=""></form></div>
+                </div>
+                <div class="col-md-5">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <div class="preview"></div>
+                            <div style="display: none" class="form-group plain_html"><textarea rows="50"
+                                    class="form-control"></textarea></div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var text_field_group = "<div class='form-group'><input type='text' class='form-control' placeholder='Text Field'></div>";
+        var checkbox_group = "<div class='checkbox'><label><input type='checkbox' value=''>Option 1</label></div>";
 
-    </body>
+        function text_field() {
+            console.log("Text Field");
+            $("#form_builder_area").append(text_field_group);
+        }
+
+        function checkbox() {
+            console.log("Checkbox");
+            $("#form_builder_area").append(checkbox_group);
+        }
+    </script>
+</body>
 </html>
